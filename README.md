@@ -1,7 +1,7 @@
 # CoRPG
 Code for paper Document-Level Paraphrase Generation with Sentence Rewriting and Reordering by Zhe Lin, Yitao Cai and Xiaojun Wan. This paper is accepted by Findings of EMNLP'21.
 
-<img src="https://github.com/L-Zhe/CoPRG/blob/main/img/model.jpg?raw=true" width = "800" alt="overview" align=center />
+<img src="https://github.com/L-Zhe/CoRPG/blob/main/img/model.jpg?raw=true" width = "800" alt="overview" align=center />
 
 ## Datasets
 
@@ -35,9 +35,9 @@ Then,  you should download the [ALBERT](https://huggingface.co/albert-base-v2) m
 
 ```shell
 python eval/coherence.py --train
-												 --pretrain_model	[pretrain_model file]
-												 --save_file [the path to save fine-tune model]
-												 --text_file [the corpora used to fine-tune the pretrain_model] 
+			 --pretrain_model	[pretrain_model file]
+			 --save_file [the path to save fine-tune model]
+			 --text_file [the corpora used to fine-tune the pretrain_model] 
 ```
 
 We also provide our fine-tune model in [here]().
@@ -46,8 +46,8 @@ Finally, you can leveraged ALBERT to generate the coherence relationship graph:
 
 ```shell
 python eval/coherence.py --inference
-												 --pretrain_model	[pretrain_model file]
-												 --text_file [generate the coherence relationship graph of this corpora]
+			 --pretrain_model	[pretrain_model file]
+			 --text_file [generate the coherence relationship graph of this corpora]
 ```
 
 **NOTE：**Our code only supports to generate the paraphrasing of documents with 5 sentences. If you want to generate longer or variable length document paraphrase, you need to make some modifications to the code.
@@ -98,15 +98,15 @@ python train.py --cuda_num 0 1 2 3\
 
 ```shell
 python generator.py --cuda_num 4 \
-                 		--file ./data/sent.pt\
-                 		--ref_file ./data/news-commentary/data/test.comb \
-                 		--max_tokens 10000 \
-                 		--vocab ./data/vocab.share \
-                 		--decode_method greedy \
-                 		--beam 5 \
-                 		--model_path ./data/model.pkl \
-                 		--output_path ./data/output \
-                 		--max_length 300
+                    --file ./data/sent.pt\
+                    --ref_file ./data/news-commentary/data/test.comb \
+                    --max_tokens 10000 \
+                    --vocab ./data/vocab.share \
+                    --decode_method greedy \
+                    --beam 5 \
+                    --model_path ./data/model.pkl \
+                    --output_path ./data/output \
+                    --max_length 300
 ```
 
 ## Pre-trained Models
@@ -133,8 +133,8 @@ where $$P_{SOP}$$ is calculated by [ALBERT](https://openreview.net/forum?id=H1eA
 
 ```shell
 python eval/coherence.py --coh
-												 --pretrain_model [the pretrain albert file]
-												 --text_file [the corpora to be evaluated]
+			 --pretrain_model [the pretrain albert file]
+			 --text_file [the corpora to be evaluated]
 ```
 
 ## Results
