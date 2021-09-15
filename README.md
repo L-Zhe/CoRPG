@@ -5,7 +5,7 @@ Code for paper Document-Level Paraphrase Generation with Sentence Rewriting and 
 
 ## Datasets
 
-We leverage [ParaNMT](https://www.cs.cmu.edu/~jwieting/) to train a sentence-level paraphrasing model. We select [News-Commentary](http://www.statmt.org/wmt20/ translation- task.html) as document corpora, and we employ sentence-level paraphrasing model to generate a pseudo document-level paraphrase and use ALBERT to generate its coherence relationship graph. All these data are released at [here](https://github.com/L-Zhe/CoPRG/data).
+We leverage [ParaNMT](https://www.cs.cmu.edu/~jwieting/) to train a sentence-level paraphrasing model. We select [News-Commentary](http://www.statmt.org/wmt20/translation-task.html) as document corpora, and we employ sentence-level paraphrasing model to generate a pseudo document-level paraphrase and use ALBERT to generate its coherence relationship graph. All these data are released at [here](https://github.com/L-Zhe/CoPRG/data).
 
 ## System Output
 
@@ -27,7 +27,7 @@ If you are looking for system output and don't bother to install dependencies an
 
 ### Step1: Prepare dataset
 
-We release the dataset we used in [data folder](https://github.com/L-Zhe/CoPRG/data). If you want to use your own dataset, you need to follow the following procedure.
+We release the dataset we used in [data folder](https://github.com/L-Zhe/CoRPG/releases/download/model/news-commentary.zip). If you want to use your own dataset, you need to follow the following procedure.
 
 First, you should train a sentence-level paraphrase model to generate pseudo documen paraphrase dataset (We leverage paraNMT and [fairseq]() to train this model).
 
@@ -35,18 +35,18 @@ Then,  you should download the [ALBERT](https://huggingface.co/albert-base-v2) m
 
 ```shell
 python eval/coherence.py --train
-			 --pretrain_model	[pretrain_model file]
+			 --pretrain_model [pretrain_model file]
 			 --save_file [the path to save fine-tune model]
 			 --text_file [the corpora used to fine-tune the pretrain_model] 
 ```
 
-We also provide our fine-tune model in [here]().
+We also provide our fine-tune model in [here](https://github.com/L-Zhe/CoRPG/releases/download/model/albert.bin).
 
 Finally, you can leveraged ALBERT to generate the coherence relationship graph:
 
 ```shell
 python eval/coherence.py --inference
-			 --pretrain_model	[pretrain_model file]
+			 --pretrain_model [pretrain_model file]
 			 --text_file [generate the coherence relationship graph of this corpora]
 ```
 
@@ -111,6 +111,8 @@ python generator.py --cuda_num 4 \
 
 ## Pre-trained Models
 
+We release our pretrain-model at [here](https://github.com/L-Zhe/CoRPG/releases/tag/model).
+
 ## Evaluation Matrics
 
 We evaluate our model in three aspects: relevancy, diversity, coherence.
@@ -121,7 +123,7 @@ We leverage [BERTScore](https://github.com/Tiiiger/bert_score) to evaluate the s
 
 ### Diversity
 
-We employ self-[TER](https://github. com/jhclark/multeval.) and self-[WER](https://github. com/belambert/asr-evaluation) to evaluate the diversity of our model. 
+We employ self-[TER](https://github.com/jhclark/multeval) and self-[WER](https://github.com/belambert/asr-evaluation) to evaluate the diversity of our model. 
 
 ### Coherence
 
