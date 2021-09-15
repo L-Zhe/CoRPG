@@ -127,7 +127,7 @@ We employ self-[TER](https://github. com/jhclark/multeval.) and self-[WER](https
 
 We raise COH and COH-p to evaluate the coherence of paraphrase as follows:
 
-<img src="https://github.com/L-Zhe/CoRPG/blob/main/img/coh.jpg?raw=true" width = "800" alt="coh" align=center />
+<img src="https://github.com/L-Zhe/CoRPG/blob/main/img/coh.jpg?raw=true" width = "200" alt="coh" align=center />
 
 where $$P_{SOP}$$ is calculated by [ALBERT](https://openreview.net/forum?id=H1eA7AEtvS). We provide the script for these two evaluation matrics as follow:
 
