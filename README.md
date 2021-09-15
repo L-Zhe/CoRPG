@@ -111,7 +111,7 @@ python generator.py --cuda_num 4 \
 
 ## Pre-trained Models
 
-We release our pretrain-model at [here](https://github.com/L-Zhe/CoRPG/releases/tag/model).
+We release our pretrained model at [here](https://github.com/L-Zhe/CoRPG/releases/tag/model).
 
 ## Evaluation Matrics
 
