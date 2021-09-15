@@ -150,8 +150,8 @@ If you use any content of this repo for your work, please cite the following bib
 ```
 @inproceedings{lin-wan-2021-document,
     title = "Document-Level Paraphrase Generation with Sentence Rewriting and Reordering",
-    author = "Lin, Zhe, Cai, Yitao  and
-      Wan, Xiaojun",
-    booktitle = "Findings of EMNLP 2021",
+    author = "Lin, Zhe and Cai, Yitao and Wan, Xiaojun",
+    booktitle = "Findings of EMNLP",
+    year={2021}
 }
 ```
