@@ -5,7 +5,7 @@ Code for paper [Document-Level Paraphrase Generation with Sentence Rewriting and
 
 ## Datasets
 
-We leverage [ParaNMT](https://www.cs.cmu.edu/~jwieting/) to train a sentence-level paraphrasing model. We select [News-Commentary](http://www.statmt.org/wmt20/translation-task.html) as document corpora, and we employ sentence-level paraphrasing model to generate a pseudo document-level paraphrase and use ALBERT to generate its coherence relationship graph. All these data are released at [here](https://github.com/L-Zhe/CoPRG/data).
+We leverage [ParaNMT](https://www.cs.cmu.edu/~jwieting/) to train a sentence-level paraphrasing model. We select [News-Commentary](http://www.statmt.org/wmt20/translation-task.html) as document corpora, and we employ sentence-level paraphrasing model to generate a pseudo document-level paraphrase and use ALBERT to generate its coherence relationship graph. All these data are released at [here](https://github.com/L-Zhe/CoRPG/releases/download/model/news-commentary.zip).
 
 ## System Output
 
